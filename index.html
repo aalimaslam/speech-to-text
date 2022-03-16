@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Recogination | Web API</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="speak()">
+    <div class="status" id="status">Listening...<br><small style="font-size: 1rem; color:#999;">Press Stop when you are finished</small></div>
+    <div class="container">
+        <div class="heading">Speech To Text</div>
+        <div class="input-container">
+            <textarea name="text" id="output" cols="30" rows="10"></textarea>
+        </div>
+        <div class="get-input-btn">
+            <button class="speak-btn btn" onclick="speechRecognition.start()">Start</button>
+            <button class="stop-btn btn" onclick="speechRecognition.stop()">Stop</button>
+            <button class="copy-btn btn" onclick="copyText()">Copy Text</button>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

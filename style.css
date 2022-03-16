@@ -1,0 +1,87 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    background:#222;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+.container{
+    background:rgba(255,255,255,0.2);
+    padding:30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 2px 5px 25px black;
+}
+.container::before{
+    content: '';
+    height:100%;
+    width:200%;
+    transform: rotate(-30deg) translate(-40%, -8%);
+    background:rgba(255,255,255,0.04);
+    position: absolute;
+    z-index: -11;
+}
+.btn{
+    all:none;
+    padding:10px 30px;
+    cursor: pointer;
+    border:1px solid gold;
+    background: transparent;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.speak-btn{
+    background:goldenrod;
+    color:white;
+}
+.copy-btn,.stop-btn{
+    color:gold;
+}
+.speak-btn:hover{
+    background:transparent;
+    color:gold;
+}
+.copy-btn:hover, .stop-btn:hover {
+    background: goldenrod;
+    color:white;
+}
+textarea{
+    resize: none;
+    background:transparent;
+    border:2px solid goldenrod;
+    outline:none;
+    width:100%;
+    padding:10px;
+    color:white;
+    margin-bottom: 20px;
+}
+.status{
+    position: absolute;
+    top:30px;
+    color:lime;
+    font-size: 2rem;
+    display: none;
+    animation: animateTextColor 1s alternate infinite;
+}
+@keyframes animateTextColor {
+    0%{
+        color:lime;
+    }
+    100%{
+        color:green;
+    }
+}
+.heading{
+    font-size:3rem;
+    padding:20px;
+    color:gold;
+}
